@@ -1,15 +1,14 @@
 import EmailTemplates from "./Components/EmailTemplates";
 import Home from "./Components/Home";
 import NavBar from "./Components/NavBar";
-import { Fragment } from "react";
 
 const App = () => {
   return (
-    <Fragment>
+    <div className="mb-[70px]">
       <NavBar />
       <Home />
       <EmailTemplates />
-    </Fragment>
+    </div>
   );
 };
 

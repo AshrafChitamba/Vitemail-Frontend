@@ -1,7 +1,7 @@
 
 const EmailTemplates = () => {
   return (
-    <div>EmailTemplates</div>
+    <div className="">EmailTemplates</div>
   )
 }
 
