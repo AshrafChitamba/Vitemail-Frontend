@@ -51,7 +51,7 @@ const NavBar = () => {
 
   return (
     <div
-      className={`fixed sm:sticky bottom-0 w-full py-2 bg-white flex items-center justify-center sm:justify-between px-4 md:px-[70px] lg:px-[150px] ${
+      className={`z-10 fixed sm:sticky bottom-0 w-full py-2 bg-white flex items-center justify-center sm:justify-between px-4 md:px-[70px] lg:px-[150px] ${
         scrollDirection === "upwards"
           ? "translate-y-0"
           : "translate-y-full sm:translate-y-0"

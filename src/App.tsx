@@ -7,7 +7,7 @@ import TrustedBy from "./Components/TrustedBy";
 
 const App = () => {
   return (
-    <div className="mb-[70px]">
+    <div>
       <NavBar />
       <Home />
       <HeroSection />
