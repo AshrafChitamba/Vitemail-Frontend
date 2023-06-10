@@ -51,14 +51,14 @@ const NavBar = () => {
 
   return (
     <div
-      className={`fixed sm:sticky bottom-0 w-full py-2 bg-white flex items-center justify-between px-4 md:px-[70px] lg:px-[150px] ${
+      className={`fixed sm:sticky bottom-0 w-full py-2 bg-white flex items-center justify-center sm:justify-between px-4 md:px-[70px] lg:px-[150px] ${
         scrollDirection === "upwards" ? "translate-y-0" : "translate-y-full"
       } transition-transform duration-300`}
     >
       <div className="flex items-center gap-x-12 justify-between sm:justify-start">
         <div>
           <img
-            src={logo}
+            src={isMobile ? fastImg : logo}
             alt="logo"
             className="w-[50px] h-[50px] sm:w-[100px] sm:h-[70px] object-contain sm:object-cover"
           />
@@ -68,7 +68,7 @@ const NavBar = () => {
             <li>
               <a
                 href="#"
-                className="text-xs sm:text-xl text-slate-500 hover:text-green-600 transition-all duration-300 ease font-semibold select-none"
+                className="text-xs sm:text-[16px] lg:text-xl text-slate-500 hover:text-green-600 transition-all duration-300 ease font-semibold select-none"
               >
                 Home
               </a>
@@ -76,7 +76,7 @@ const NavBar = () => {
             <li>
               <a
                 href="#"
-                className="text-xs sm:text-xl text-slate-500 hover:text-green-600 transition-all duration-300 ease font-semibold select-none"
+                className="text-xs sm:text-[16px] lg:text-xl text-slate-500 hover:text-green-600 transition-all duration-300 ease font-semibold select-none"
               >
                 Docs
               </a>
@@ -84,7 +84,7 @@ const NavBar = () => {
             <li>
               <a
                 href="#"
-                className="text-xs sm:text-xl text-slate-500 hover:text-green-600 transition-all duration-300 ease font-semibold select-none"
+                className="text-xs sm:text-[16px] lg:text-xl text-slate-500 hover:text-green-600 transition-all duration-300 ease font-semibold select-none"
               >
                 Demo
               </a>
@@ -92,7 +92,7 @@ const NavBar = () => {
             <li>
               <a
                 href="#"
-                className="text-xs sm:text-xl text-slate-500 hover:text-green-600 transition-all duration-300 ease font-semibold select-none"
+                className="text-xs sm:text-[16px] lg:text-xl text-slate-500 hover:text-green-600 transition-all duration-300 ease font-semibold select-none"
               >
                 Sponsor
               </a>
