@@ -2,7 +2,7 @@ import fastImg from "../assets/fast.png";
 
 const Home = () => {
   return (
-    <div className="bg-gradient-to-r from-green-50 h-[350px] grid place-content-center">
+    <div className="bg-gradient-to-r from-green-50 h-[350px] grid pt-6 sm:pt-0 content-start sm:place-content-center">
       <div className="text-center flex items-center justify-center">
         <img
           src={fastImg}
@@ -10,7 +10,7 @@ const Home = () => {
           className="-ml-8 sm:ml-0 w-[80px] sm:w-[100px] h-[60px] sm:h-[80px] object-contain"
         />
 
-        <span className="-ml-6 bg-clip-text text-transparent bg-gradient-to-r from-green-800 to-green-400 text-2xl sm:text-6xl font-bold select-none">
+        <span className="-ml-6 bg-clip-text text-transparent bg-gradient-to-r from-green-800 to-green-400 text-[1.7rem] sm:text-6xl font-bold select-none">
           Fast and secure
         </span>
       </div>
