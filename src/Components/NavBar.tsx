@@ -52,7 +52,9 @@ const NavBar = () => {
   return (
     <div
       className={`fixed sm:sticky bottom-0 w-full py-2 bg-white flex items-center justify-center sm:justify-between px-4 md:px-[70px] lg:px-[150px] ${
-        scrollDirection === "upwards" ? "translate-y-0" : "translate-y-full"
+        scrollDirection === "upwards"
+          ? "translate-y-0"
+          : "translate-y-full sm:translate-y-0"
       } transition-transform duration-300`}
     >
       <div className="flex items-center gap-x-12 justify-between sm:justify-start">
@@ -63,6 +65,7 @@ const NavBar = () => {
             className="w-[50px] h-[50px] sm:w-[100px] sm:h-[70px] object-contain sm:object-cover"
           />
         </div>
+        
         <nav className="flex items-center gap-x-2">
           <ul className="flex items-center gap-x-4">
             <li>
