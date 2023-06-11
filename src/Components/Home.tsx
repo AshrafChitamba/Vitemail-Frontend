@@ -1,4 +1,5 @@
 import fastImg from "../assets/fast.png";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -20,12 +21,12 @@ const Home = () => {
       </div>
 
       <div className="text-center mt-6 flex items-center justify-center px-4 gap-y-3 gap-x-2 sm:gap-x-6">
-        <button className="py-3 px-5 bg-gradient-to-r from-green-800 to-green-400 text-white rounded-3xl w-[130px] lg:w-[150px] outline outnline-2 hover:outline-green-400 hover:from-transparent hover:text-green-400">
+        <Link to={'docs'} className="py-3 px-5 bg-gradient-to-r from-green-800 to-green-400 text-white rounded-3xl w-[130px] lg:w-[150px] outline outnline-2 hover:outline-green-400 hover:from-transparent hover:text-green-400">
           Docs
-        </button>
-        <button className="py-3 px-5 bg-gradient-to-r hover:from-green-800 hover:to-green-400 text-green-400 hover:text-white rounded-3xl w-[130px] lg:w-[150px] outline outnline-2 outline-green-400 hover:outline-transparent">
+        </Link>
+        <Link to={'sponsor'} className="py-3 px-5 bg-gradient-to-r hover:from-green-800 hover:to-green-400 text-green-400 hover:text-white rounded-3xl w-[130px] lg:w-[150px] outline outnline-2 outline-green-400 hover:outline-transparent">
           Sponsor
-        </button>
+        </Link>
       </div>
     </div>
   );

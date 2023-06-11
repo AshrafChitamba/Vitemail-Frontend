@@ -3,7 +3,14 @@ import fastImg from "../assets/fast.png";
 import { IoLogoGithub } from "react-icons/io";
 import { FaTwitter } from "react-icons/fa";
 import { useCallback, useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 
+const pages = [
+  { title: "Home" },
+  { title: "Docs" },
+  { title: "Demo" },
+  { title: "Sponsor" },
+];
 type direction = "downwards" | "upwards";
 
 const NavBar = () => {
@@ -65,41 +72,22 @@ const NavBar = () => {
             className="w-[50px] h-[50px] sm:w-[100px] sm:h-[70px] object-contain sm:object-cover"
           />
         </div>
-        
+
         <nav className="flex items-center gap-x-2">
           <ul className="flex items-center gap-x-4">
-            <li>
-              <a
-                href="#"
-                className="text-xs sm:text-[16px] lg:text-xl text-slate-500 hover:text-green-600 transition-all duration-300 ease font-semibold select-none"
-              >
-                Home
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="text-xs sm:text-[16px] lg:text-xl text-slate-500 hover:text-green-600 transition-all duration-300 ease font-semibold select-none"
-              >
-                Docs
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="text-xs sm:text-[16px] lg:text-xl text-slate-500 hover:text-green-600 transition-all duration-300 ease font-semibold select-none"
-              >
-                Demo
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="text-xs sm:text-[16px] lg:text-xl text-slate-500 hover:text-green-600 transition-all duration-300 ease font-semibold select-none"
-              >
-                Sponsor
-              </a>
-            </li>
+            {pages.map((page) => (
+              <li>
+                <NavLink
+                  to={page.title === "home" ? "" : page.title.toLowerCase()}
+                  onClick={() => {
+                    document.title = page.title;
+                  }}
+                  className="capitalize text-xs sm:text-[16px] lg:text-xl text-slate-500 hover:text-green-600 transition-all duration-300 ease font-semibold select-none"
+                >
+                  {page.title}
+                </NavLink>
+              </li>
+            ))}
           </ul>
         </nav>
       </div>

@@ -1,21 +1,8 @@
-import EmailTemplates from "./Components/EmailTemplates";
-import HeroSection from "./Components/HeroSection";
-import Home from "./Components/Home";
-import JoinNewsLetter from "./Components/JoinNewsLetter";
-import NavBar from "./Components/NavBar";
-import TrustedBy from "./Components/TrustedBy";
+import { RouterProvider } from "react-router-dom";
+import router from "./router";
 
 const App = () => {
-  return (
-    <div>
-      <NavBar />
-      <Home />
-      <HeroSection />
-      <EmailTemplates />
-      <TrustedBy />
-      <JoinNewsLetter />
-    </div>
-  );
+  return <RouterProvider router={router} />;
 };
 
 export default App;
