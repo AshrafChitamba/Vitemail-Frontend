@@ -64,17 +64,17 @@ const NavBar = () => {
           : "translate-y-full sm:translate-y-0"
       } transition-transform duration-300`}
     >
-      <div className="flex items-center gap-x-12 justify-between sm:justify-start">
-        <div>
+      <div className="flex items-center gap-x-1 sm:gap-x-8 lg:gap-x-12 justify-between sm:justify-start">
+        <div className="w-[50px] h-[50px] sm:w-[100px] sm:h-[70px]">
           <img
             src={isMobile ? fastImg : logo}
             alt="logo"
-            className="w-[50px] h-[50px] sm:w-[100px] sm:h-[70px] object-contain sm:object-cover"
+            className="w-full h-full object-contain sm:object-cover"
           />
         </div>
 
-        <nav className="flex items-center gap-x-2">
-          <ul className="flex items-center gap-x-4">
+        <nav>
+          <ul className="flex items-center gap-x-2 sm:gap-x-4">
             {pages.map((page) => (
               <li>
                 <NavLink
