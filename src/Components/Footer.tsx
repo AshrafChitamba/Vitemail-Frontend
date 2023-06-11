@@ -3,7 +3,7 @@ import { FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className="bg-white py-5 px-2 text-slate-500 flex items-center justify-around">
+    <div className="bg-white shadow py-5 px-2 text-slate-500 flex items-center justify-around">
       <small className="text-center">
         Copyright &copy; {new Date().getFullYear()} All right reserved @Vitemail
       </small>

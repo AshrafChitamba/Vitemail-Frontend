@@ -78,11 +78,11 @@ const NavBar = () => {
             {pages.map((page) => (
               <li>
                 <NavLink
-                  to={page.title === "home" ? "" : page.title.toLowerCase()}
+                  to={page.title === "Home" ? "" : page.title.toLowerCase()}
                   onClick={() => {
                     document.title = page.title;
                   }}
-                  className="capitalize text-xs sm:text-[16px] lg:text-xl text-slate-500 hover:text-green-600 transition-all duration-300 ease font-semibold select-none"
+                  className={({ isActive }) => `capitalize text-xs sm:text-[16px] lg:text-xl text-slate-500 hover:text-green-600 transition-all duration-300 ease font-semibold select-none p-2 rounded ${isActive ? "bg-green-50" : ""}`}
                 >
                   {page.title}
                 </NavLink>
