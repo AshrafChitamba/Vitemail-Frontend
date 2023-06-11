@@ -2,7 +2,7 @@ import { useState } from "react";
 import Editor from "@monaco-editor/react";
 import { cssTemplate, htmlTemplate, setEditorTheme } from "../monacoConfig";
 import DOMPurify from "dompurify";
-import SplitPane from "react-split";
+// import SplitPane from "react-split";
 
 const Files = {
   html: {
@@ -45,7 +45,7 @@ const Playground = () => {
         </button>
       </div>
 
-      <SplitPane
+      {/* <SplitPane
         sizes={[25, 75]}
         minSize={100}
         expandToMin={false}
@@ -58,7 +58,7 @@ const Playground = () => {
       >
         <div className="bg-red-500 h-[300px]"></div>
         <div className="bg-green-500 h-[300px]"></div>
-      </SplitPane>
+      </SplitPane> */}
       <Editor
         height="300px"
         // width="600px"
