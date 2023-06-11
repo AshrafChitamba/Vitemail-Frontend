@@ -20,7 +20,7 @@ const Home = () => {
         <p className="text-slate-500">Let us send your email fast for free 💸 while we handle the hard stuff for you</p>
       </div>
 
-      <div className="text-center mt-6 flex items-center justify-center px-4 gap-y-3 gap-x-2 sm:gap-x-6">
+      <div className="text-center mt-6 flex items-center justify-center px-4 gap-y-3 gap-x-4 sm:gap-x-6">
         <Link to={'docs'} className="py-3 px-5 bg-gradient-to-r from-green-800 to-green-400 text-white rounded-3xl w-[130px] lg:w-[150px] outline outnline-2 hover:outline-green-400 hover:from-transparent hover:text-green-400">
           Docs
         </Link>
