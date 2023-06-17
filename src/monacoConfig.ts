@@ -9,7 +9,7 @@ export const htmlTemplate =
 
 export const cssTemplate =
 `.form-label {
-    color:  'green';
+    color:  green;
 }`
 
 export const setEditorTheme = (editor: any) => {
