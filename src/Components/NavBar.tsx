@@ -4,6 +4,7 @@ import { IoLogoGithub } from "react-icons/io";
 import { FaTwitter } from "react-icons/fa";
 import { useCallback, useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
+import { useScrollDirection, useWindowMedia } from "react-window-observer";
 
 const pages = [
   { title: "Home" },
@@ -11,55 +12,15 @@ const pages = [
   { title: "Playground" },
   { title: "Sponsor" },
 ];
-type direction = "downwards" | "upwards";
 
 const NavBar = () => {
-  const [lastScrollPos, setlastScrollPos] = useState(0);
-  const [scrollDirection, setScrollDirection] =
-    useState<direction>("downwards");
-  const [isMobile, setIsMobile] = useState(
-    window.matchMedia("(max-width: 640px)").matches
-  );
-
-  // checking the user scroll direction
-  const detectScrollDirection = () => {
-    var currentPos = window.scrollY;
-    if (currentPos > lastScrollPos) setScrollDirection(() => "downwards");
-    else setScrollDirection(() => "upwards");
-
-    setlastScrollPos(currentPos);
-  };
-
-  // checking the device width
-  const checkDeviceWidth = useCallback(() => {
-    const isTrue = window.matchMedia("(max-width: 640px)").matches;
-
-    if (isTrue) setIsMobile(true);
-    else setIsMobile(false);
-  }, []);
-
-  // effect for device width
-  useEffect(() => {
-    window.addEventListener("resize", checkDeviceWidth);
-
-    return () => {
-      window.removeEventListener("resize", checkDeviceWidth);
-    };
-  }, [isMobile]);
-
-  // effect for scrolling
-  useEffect(() => {
-    window.addEventListener("scroll", detectScrollDirection);
-
-    return () => {
-      window.removeEventListener("scroll", detectScrollDirection);
-    };
-  }, [window.scrollY]);
+  const direction = useScrollDirection();
+  const isMobile = useWindowMedia();
 
   return (
     <div
       className={`z-10 fixed sm:sticky bottom-0 w-full py-2 bg-white flex items-center justify-center sm:justify-between px-4 md:px-[70px] lg:px-[150px] ${
-        scrollDirection === "upwards"
+        direction === "upwards"
           ? "translate-y-0"
           : "translate-y-full sm:translate-y-0"
       } transition-transform duration-300`}
