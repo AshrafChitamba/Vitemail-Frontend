@@ -2,7 +2,6 @@ import logo from "../assets/logo3.png";
 import fastImg from "../assets/fast.png";
 import { IoLogoGithub } from "react-icons/io";
 import { FaTwitter } from "react-icons/fa";
-import { useCallback, useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useScrollDirection, useWindowMedia } from "react-window-observer";
 
