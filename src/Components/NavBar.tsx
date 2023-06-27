@@ -23,7 +23,7 @@ const NavBar = () => {
 
   // checking the user scroll direction
   const detectScrollDirection = () => {
-    var currentPos = window.pageYOffset;
+    var currentPos = window.scrollY;
     if (currentPos > lastScrollPos) setScrollDirection(() => "downwards");
     else setScrollDirection(() => "upwards");
 
@@ -54,7 +54,7 @@ const NavBar = () => {
     return () => {
       window.removeEventListener("scroll", detectScrollDirection);
     };
-  }, [window.pageYOffset]);
+  }, [window.scrollY]);
 
   return (
     <div
